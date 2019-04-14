@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get It Done Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="./Css/Home.css">
+	<script src="./Js/Home.js"></script>
+</head>
+
+<body>
+	<!-- Navigation bar for logo and admin login -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img id="logo" src="./images/MH-logo.jpg"><span id="brand-name"> Make It <span id="make-it-black">Happen</span></span></a>
+			<a class="navbar-admin-login" href="#"><i id="icon-color" class="fas fa-lock"><span id="text-1"> admin login</span></i></a>
+		</div>
+	</nav>
+	<!-- main page -->
+	<div class="landing-page">
+		<!-- first row to dispay information -->
+		<div class="row">
+			<div class="col-sm-8">
+				<!-- section for information -->
+				<div class="padding">
+					<!-- silder div -->
+					<div id="Myslider" class="carousel slide" data-ride="carousel">
+						<!-- indicators -->
+						<ul class="carousel-indicators" >
+							<li id="make-it-black" data-target="#Myslider" data-slide-to="0" class="active"></li>
+							<li id="make-it-black" data-target="#Myslider" data-slide-to="1"></li>
+						</ul>
+						<!-- items of the carousel -->
+						<div class="carousel-inner" role="listbox">
+							<div class="carousel-item active">
+								<div class="row row-2">
+									<div class="col-sm-6">
+										<img id="create-task-logo" src="./images/Create-Task.png">
+									</div>
+									<div class="col-sm-6" id="content">
+										<h3><span style="color:black">Create Task</span></h3>
+										<p>Create new tasks, Define deadline, Assign it to your colleague</p>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="row row-2">
+									<div class="col-sm-6">
+										<img id="create-task-logo" src="./images/Create-Task.png">
+									</div>
+									<div class="col-sm-6" id="content">
+										<h3><span style="color:black">Create Task</span></h3>
+										<p>Create new tasks, Define deadline, Assign it to your colleague</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- controls for the items -->
+						<a class="carousel-control-prev" href="#Myslider" data-slide="prev" role="button"> 
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">prev</span>
+						</a>
+						<a class="carousel-control-next" href="#Myslider" data-slide="next" role="button" >
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>		
+				</div>	
+			</div>	
+			<!-- second section for log in -->
+			<div class="col-sm-3" id="col-2">
+				<!-- <div class="credential"> -->
+					<div class="row form-row">
+						<div class="col-sm-12">
+							<!-- login and register -->
+							<div class="panel panel-login">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-sm-6">
+											<a href="#" class="active" id="login-form-link">Login</a>
+										</div>
+										<div class="col-sm-6">
+											<a href="#" id="register-form-link">Register</a>
+										</div>
+									</div>
+									<hr>
+								</div>
+								<!-- form to get credentials -->
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-lg-12">
+											<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+												<div class="form-group">
+													<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+												</div>
+												<div class="form-group">
+													<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+												</div>
+												<!-- <div class="form-group text-center">
+													<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+													<label for="remember"> Remember Me</label>
+												</div> -->
+												<div class="form-group">
+													<div class="row">
+														<div class="col-sm-6 col-sm-offset-3">
+															<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+														</div>
+													</div>
+												</div>
+												<!-- <div class="form-group">
+													<div class="row">
+														<div class="col-lg-12">
+															<div class="text-center">
+																<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+															</div>
+														</div>
+													</div>
+												</div> -->
+											</form>
+											<form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
+												<div class="form-group">
+													<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+												</div>
+												<div class="form-group">
+													<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+												</div>
+												<div class="form-group text-left">
+													<input type="radio" class="" name="gender" value="male" id="male">
+													<label for="male"> <span style="color: #606060"> Male</span></label>
+													<input type="radio" class="" name="gender" value="female" id="female">
+													<label for="female"> <span style="color: #606060"> Female</span></label>
+												</div>
+												<div class="form-group">
+													<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+												</div>
+												<div class="form-group">
+													<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+												</div>
+												<div class="form-group">
+													<div class="row">
+														<div class="col-sm-6 col-sm-offset-3">
+															<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				<!-- </div> -->
+			</div>		
+		</div>
+	</div>
+	
+</body>
+</html>
