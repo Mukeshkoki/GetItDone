@@ -17,7 +17,7 @@ $(function() {
 	});
 	
 //when user enters the credential and clicks login	
-	$("login-submit").click(function(e){
+	$("login-submit").on("click", function(e){
 		var userName = $("#username").val();
 		var password = $("#password").val();
 
